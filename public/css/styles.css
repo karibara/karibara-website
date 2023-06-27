@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: #ffe8ad;
+  margin: 0;
+}
+
+header {
+  background-color: #fed2aa;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #94b49f;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+h2 {
+  color: #df7861;
+  font-weight: 600;
+}
+
+h3 {
+  color: #94b49f;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+
+/* nav bar */
+.navbar {
+  min-height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
+  background-color: #fed2aa;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.75rem;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  color: #915b50;
+
+}
+
+.nav-link:hover {
+  color: #85d7a3;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 1.5rem;
+  height: 0.2rem;
+  margin: 0.3rem auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #915b50;
+}
+
+/* nav bar logo */
+.karibara-logo {
+  width: 35px;
+  height: 35px;
+  margin: 0.5rem 1rem;
+}
+
+/* nav bar RWD */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(0.5rem) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-0.5rem) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    /* menu shows up after 0.3s from the left */
+    left: -100%;
+    transition: 0.3s;
+
+    top: 3.5rem;
+    gap: 0;
+    flex-direction: column;
+
+    background: rgba(254, 210, 170, 0.5);
+    backdrop-filter: blur(0.5rem);
+
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .nav-item {
+    margin: 1rem 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* BODY */
+.container-fluid {
+  padding: 0;
+}
+
+.main-margin {
+  margin: 0 15%;
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .main-margin {
+    margin: 1rem;
+  }
+
+  .card-title {
+    text-align: center;
+  }
+
+  .btn-cv {
+    margin: 0 auto 0 auto;
+  }
+  .div-cv {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+
+/* WELCOME  HEADER */
+.welcome-header {
+  padding-top: 10%;
+}
+
+.bg-workdesk {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(/public/images/bg-workdesk.png);
+}
+
+@media (max-width: 992px) {
+  .welcome-header {
+    padding-top: 20%;
+  }
+}
+
+
+/* ABOUT section */
+#about {
+  padding: 5rem 3rem;
+  margin-bottom: 25%;
+  margin-top: 50%;
+  text-shadow: 0 0 10px #f7e2ad;
+}
+
+@media (max-width: 992px) {
+  #about {
+    padding: 0.5rem 0.5rem;
+    margin-top: 90%;
+    margin-bottom: 40%;
+  }
+}
+
+/* glass-card*/
+.glass-card {
+  background: hsl(0 0% 100% / 0.1);
+  backdrop-filter: blur(1rem);
+  border-color: #ffe8ad;
+  box-shadow: 1.3rem 1.3rem 1.3rem rgba(145, 91, 80, 0.1),
+    -1.3rem -1.3rem 1.3rem rgba(239, 218, 183, 0.2);
+  border-radius: 1.5rem;
+  padding: 0;
+}
+
+
+.card-text {
+  color: #915b50;
+}
+
+
+.profile-img {
+  width: 8rem;
+  height: 8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* My linkedIn page Button (change to  My resumee when resumee page is ready) */
+.btn-cv {
+  border-radius: 25px;
+  background-color: #b9ccb8;
+  color: white;
+}
+
+.btn-cv:hover {
+  background-color: #94b49f;
+}
+
+.anchor-cv {
+  color: #080808;
+}
+
+.anchor-cv:hover {
+  color: #030303;
+}
+
+.div-cv {
+  padding-left: 6%;
+}
+
+/* SKILLS section */
+#skills {
+  background-color: #D4B5A260;
+  padding: 1rem 15% 3rem;
+}
+
+@media (max-width: 1200px) {
+   .card-frontend {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  #skills {
+    padding: 1rem;
+  }
+
+  .card-frontend {
+    margin-bottom: 2rem;
+  }
+}
+
+
+.skills-row {
+  margin:0;
+  justify-content: center;
+}
+
+
+
+.skills-header {
+  text-align: center;
+  color: #6A8272;
+  margin: 2rem auto 3rem auto;
+  
+}
+
+.screen-png {
+  width: 11rem;
+  margin: 1rem auto 0 auto;
+}
+
+.screen-div {
+  background-color: white;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  
+}
+
+.card-skills-header {
+  background-color: #f7efe4;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card-skills-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #94b49f;
+  text-align: center;
+  background-color: #f7efe4;
+  padding: 1rem 0 1rem 0;
+}
+
+.card-description {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* PROJECTS Section */
+#projects {
+  list-style: none;
+  padding: 0 10% 5%;
+}
+
+.ul-projects {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 992px) {
+.ul-projects {
+  text-align: center;
+}
+}
+
+/* PROJECTS hover effect */
+
+a, a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 24px;
+}
+a:before, a:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+a:hover {
+  color: #080808;
+}
+
+.underline-effect {
+  padding-top: 10px;
+}
+.underline-effect:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #df7861;
+  transform: scaleX(0);
+}
+.underline-effect:hover:before {
+  transform: scaleX(1);
+}
+
+
+/* CONTACT Section */
+#contact {
+  text-align: center;
+  color: #94B49F;
+}
+
+/* Contact me Button */
+.btn-contact {
+  border-radius: 25px;
+  background-color: #b9ccb8;
+  color: #080808;
+  font-weight: 600;
+}
+
+.a-contact {
+  color: #344138;
+}
+
+.a-contact:visited {
+  color: red;
+}
+
+.btn-contact:hover {
+  background-color: #94b49f;
+  color: #f7efe4;
+}
+
+.contact-header {
+  color: #94B49F;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  
+}
+
+
+.project-div {
+  padding: 0;
+}
+
+/* Background image above the footer*/
+.bg-desk {
+  background-image: url(/public/images/bg-desk-closeup.png);
+  background-size: cover;
+  background-position: center;
+  
+  padding-top: 5%;
+  padding-bottom: 20%;
+}
+
+
+/* FOOTER */
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #ecb390;
+  color: #bd7a6d;
+}
+
+.icons {
+  text-align: center;
+  margin: 1.5rem 0.25rem 0.25rem 0.25rem;
+  font-size: 2rem;
+  color: #bd7a6d;
+}
+
+.font-anchor {
+  text-decoration: none;
+}
+
+
+
