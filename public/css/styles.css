@@ -197,18 +197,22 @@ h3 {
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
-  background-image: url(/public/images/bg-workdesk.png);
+  background-image: url(/public/images/bg-workdesk_2560x3200px_regular.png);
 }
 
-@supports (background-size: cover) {
+@media (min-width: 1401px) {
   .bg-workdesk {
-    background-size: cover;
+    background-image: url(/public/images/bg-workdesk_2560x3500px_large.png);
   }
 }
 
 @media (max-width: 992px) {
   .welcome-header {
     padding-top: 20%;
+  }
+
+  .bg-workdesk {
+    background-image: url(/public/images/bg-workdesk_2560x2560px_mobile.png);
   }
 }
 
