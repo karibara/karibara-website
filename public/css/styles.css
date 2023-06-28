@@ -213,6 +213,7 @@ h3 {
 
   .bg-workdesk {
     background-image: url(/public/images/bg-workdesk_2560x2560px_mobile.png);
+    background-position: top;
   }
 }
 
