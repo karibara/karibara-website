@@ -186,8 +186,14 @@ h3 {
 
 
 /* WELCOME  HEADER */
+
 .welcome-header {
   padding-top: 10%;
+}
+
+.glow {
+  text-shadow: 0 0 2px #ffe8ad;
+  /* background-color: #ffe8ad; */
 }
 
 .bg-workdesk {
@@ -195,27 +201,27 @@ h3 {
   height: 100%;
   background-position-x: 50%;
   background-position-y: 0%;
-  /* background-position: center; */
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
   background-image: url(/public/images/bg-workdesk_2560x3200px_regular.png);
 }
 
-@media (min-width: 1401px) {
+@media (min-width: 1201px) {
   .bg-workdesk {
     background-image: url(/public/images/bg-workdesk_2560x3500px_large.png);
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 720px) {
   .welcome-header {
     padding-top: 20%;
   }
 
   .bg-workdesk {
     background-image: url(/public/images/bg-workdesk_2560x2560px_mobile.png);
-    
+    background-position: bottom;
   }
 }
 
