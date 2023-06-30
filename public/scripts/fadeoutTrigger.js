@@ -1,4 +1,5 @@
 let skills = document.getElementById('skills');
+let screenWidth = document.documentElement.clientWidth || window.innerWidth;
 
 // this function change opacity of element while scrolling
 function fadeOutOnScroll(element) {
@@ -27,4 +28,10 @@ function scrollHandler() {
   fadeOutOnScroll(skills);
 }
 
-window.addEventListener('scroll', scrollHandler);
+// this execute code conditioned by the screen size
+if (screenWidth > 480) {
+  // behavior on desktop
+  window.addEventListener('scroll', scrollHandler);
+} else {
+  // behavior on mobile
+}
